@@ -2,10 +2,10 @@
 	"name": "example",
 	"scripts": {
 		"build": "NODE_ENV=production node ./node_modules/@lastui/rocker/bin/webpack.js",
-		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js serve"
+		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
 	},
 	"dependencies": {
-		"@lastui/dependencies": "1.0.0",
-		"@lastui/rocker": "0.0.6"
+		"@lastui/dependencies": "1.0.2",
+		"@lastui/rocker": "0.0.28"
 	}
 }

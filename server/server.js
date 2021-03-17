@@ -13,7 +13,7 @@ async function index(req, res) {
 
 async function asset(req, res) {
 	console.log('in asset', req.url);
-	const filePath = path.join(__dirname, '../runtime', req.url);
+	const filePath = path.join(__dirname, '..', req.url);
 	if (!fs.existsSync(filePath)) {
 		return index(req, res);
 
@@ -24,8 +24,13 @@ async function asset(req, res) {
 async function context(req, res) {
 	console.log('in context', req.url);
 	return res.json({
-		available: [],
-		entrypoint: {},
+		available: [
+			{
+				name: 'example_simple',
+				url: 'examples/simple/build/main.min.js',
+			}
+		],
+		entrypoint: 'example_simple',
 	})
 }
 

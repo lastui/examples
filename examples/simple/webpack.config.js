@@ -1,16 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
 
-const settings = require('./node_modules/@lastui/rocker/webpack/settings');
-const { Config } = require('webpack-config');
+const settings = require("./node_modules/@lastui/rocker/webpack/settings");
 
-module.exports = new Config()
-	.extend(path.resolve(settings.WEBPACK_ROOT_PATH, 'config/module.js'))
-	.merge({
-		entry: {
-			main: ['./src/index.js'],
-		},
-	})
+const config = require(path.resolve(settings.WEBPACK_ROOT_PATH, "config/module.js"));
 
+config.entry = {
+	main: ["./src/index.js"],
+};
 
-
+module.exports = config;
