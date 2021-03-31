@@ -1,5 +1,5 @@
 {
-	"name": "example",
+	"name": "layout",
 	"scripts": {
 		"build": "NODE_ENV=production node ./node_modules/@lastui/rocker/bin/webpack.js",
 		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
