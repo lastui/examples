@@ -21,7 +21,11 @@ function file(filePath) {
 }
 
 async function asset(req, res) {
-	return file(path.join(__dirname, '..', req.url))(req, res);
+	if (path.extname(req.url).length === 0) {
+		return await index(req,res)
+	} else {
+		return await file(path.join(__dirname, '..', req.url))(req, res);
+	}
 }
 
 async function context(req, res) {
