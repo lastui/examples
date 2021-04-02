@@ -6,7 +6,7 @@ const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 function* tick() {
   while(true) {
     yield call(sleep, 1000);
-    yield put({ type: 'EXAMPLE_TICK' })
+    yield put({ type: 'SIMPLE_TICK' })
   }
 }
 

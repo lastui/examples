@@ -1,9 +1,14 @@
 import Simple from './components/Simple';
-//import rootSaga from './saga';
+import reducer from './reducer';
+import saga from './saga';
 
 import { registerModule } from '@lastui/rocker/platform';
 
 registerModule.call(__SANDBOX_SCOPE__, {
 	MainView: Simple,
-	//saga: rootSaga,
+	reducer,
+	saga,
+	shared: {
+		'from_simple': 'with_love',
+	},
 });

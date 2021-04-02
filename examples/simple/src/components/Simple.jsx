@@ -1,13 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Simple = () => {
+	const count = useSelector((state) => {
+		console.log('state updated in ticker')
+		return state.ticker;
+	})
+
 	return (
 		<div>
-			Module simple here
+			{`Module simple here ${count}`}
 		</div>
 	);
 }
-
-Simple.displayName = "Simple";
 
 export default Simple;

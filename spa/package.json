@@ -1,0 +1,20 @@
+{
+	"scripts": {
+		"build": "NODE_ENV=production node ./node_modules/@lastui/rocker/bin/webpack.js",
+		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
+	},
+	"dependencies": {
+		"@lastui/dependencies": "1.0.3",
+		"@lastui/rocker": "0.2.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lastui/examples.git"
+	},
+	"author": "jan.cajthaml@gmail.com",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/lastui/examples/issues"
+	},
+	"homepage": "https://github.com/lastui/examples#readme"
+}
