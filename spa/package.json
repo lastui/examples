@@ -5,7 +5,7 @@
 	},
 	"dependencies": {
 		"@lastui/dependencies": "1.0.3",
-		"@lastui/rocker": "0.2.9"
+		"@lastui/rocker": "0.2.16"
 	},
 	"repository": {
 		"type": "git",
