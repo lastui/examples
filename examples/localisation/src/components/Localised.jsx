@@ -1,20 +1,20 @@
 import React from 'react';
-import { FormattedMessage, FormattedTime } from 'react-intl';
+import { useDispatch, useSelector } from 'react-redux';
+import { actions } from '@lastui/rocker/platform';
+import { FormattedMessage, FormattedTime, useIntl } from 'react-intl';
 
 const Localised = () => {
-	// FIXME useSelect to select current language
-	// FIXME useDispatch to change current language
+	const intl = useIntl()
+	const dispatch = useDispatch();
 
-	const [language, setLanguage] = React.useState('en-US')
-	//let language = 'en-US';
 	const changeLanguage = (event) => {
-		setLanguage(event.target.value);
+		dispatch(actions.setLanguage(event.target.value));
 	};
 
 	return (
 		<div>
 			<div>
-				<select onChange={changeLanguage} value={language}>
+				<select onChange={changeLanguage} value={intl.locale}>
                   <option value="en-US">English</option>
                   <option value="cs">Czech</option>
                </select>
