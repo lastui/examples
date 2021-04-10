@@ -9,7 +9,7 @@ const B = () => <div>B</div>
 
 const Routing = () => {
 	const sharedState = useSelector((state) => {
-		console.log('full state', state);
+		console.log('full state in routing', state);
 		return state.shared
 	});
 
@@ -32,7 +32,5 @@ const Routing = () => {
 		</div>
 	);
 }
-
-Routing.displayName = "Routing";
 
 export default Routing;

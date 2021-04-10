@@ -6,12 +6,11 @@ const Layout = () => {
 	return (
 		<div>
 			{'Module layout here'}
+			<Module name="localisation" />
 			<Module name="simple" />
 			<Module name="routing" />
 		</div>
 	);
 }
-
-Layout.displayName = "Layout";
 
 export default Layout;

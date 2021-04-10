@@ -36,6 +36,10 @@ async function context(req, res) {
 				url: 'examples/simple/build/main.min.js',
 			},
 			{
+				name: 'localisation',
+				url: 'examples/localisation/build/main.min.js',
+			},
+			{
 				name: 'layout',
 				url: 'examples/layout/build/main.min.js',
 			},
