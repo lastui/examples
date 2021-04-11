@@ -16,7 +16,7 @@ const Localised = () => {
 			<div>
 				<select onChange={changeLanguage} value={intl.locale}>
                   <option value="en-US">English</option>
-                  <option value="cs">Czech</option>
+                  <option value="cs-CZ">Česky</option>
                </select>
 			</div>
 			<div>
