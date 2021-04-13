@@ -8,10 +8,7 @@ const A = () => <div>A</div>
 const B = () => <div>B</div>
 
 const Routing = () => {
-	const sharedState = useSelector((state) => {
-		console.log('full state in routing', state);
-		return state.shared
-	});
+	const sharedState = useSelector((state) => state.shared);
 
 	return (
 		<div>
