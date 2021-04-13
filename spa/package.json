@@ -4,10 +4,10 @@
 		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
 	},
 	"dependencies": {
-		"@formatjs/intl-numberformat": "^6.2.5",
-		"@formatjs/intl-relativetimeformat": "^8.1.4",
+		"@formatjs/intl-numberformat": "6.2.5",
+		"@formatjs/intl-relativetimeformat": "8.1.4",
 		"@lastui/dependencies": "1.1.4",
-		"@lastui/rocker": "0.3.11"
+		"@lastui/rocker": "0.3.17"
 	},
 	"repository": {
 		"type": "git",
