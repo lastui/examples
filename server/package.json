@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"start": "nodemon --verbose index.js"
+	},
+	"dependencies": {
+		"express": "4.17.1",
+		"nodemon": "2.0.7"
+	}
+}
