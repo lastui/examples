@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Title } from './theme';
+import { Module } from '@lastui/rocker/platform';
 
 const Simple = () => {
 	const count = useSelector((state) => state.ticker)
@@ -10,7 +11,8 @@ const Simple = () => {
 			{`elapsed ${count}...`}
 			<Title count={count}>
 				styled controled by props
-			</Title>			
+			</Title>
+			<Module name="nonexistant" />
 		</div>
 	);
 }

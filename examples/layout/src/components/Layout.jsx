@@ -4,12 +4,12 @@ import { Module } from '@lastui/rocker/platform';
 
 const Layout = () => {
 	return (
-		<div>
-			{'Module layout here'}
+		<React.Fragment>
 			<Module name="localisation" />
 			<Module name="simple" />
+			<Module name="broken" />
 			<Module name="routing" />
-		</div>
+		</React.Fragment>
 	);
 }
 
