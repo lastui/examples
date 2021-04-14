@@ -32,6 +32,10 @@ async function context(req, res) {
 	return res.json({
 		available: [
 			{
+				name: 'broken',
+				url: 'examples/broken/build/main.min.js',
+			},
+			{
 				name: 'simple',
 				url: 'examples/simple/build/main.min.js',
 			},
