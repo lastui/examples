@@ -6,7 +6,9 @@ const Layout = () => {
 	return (
 		<React.Fragment>
 			<Module name="localisation" />
-			<Module name="simple" />
+			<Module name="simple">
+				child of simple provided from layout
+			</Module>
 			<Module name="broken" />
 			<Module name="routing" />
 		</React.Fragment>
