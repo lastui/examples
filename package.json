@@ -1,0 +1,19 @@
+{
+	"scripts": {
+		"all": "npm run update && npm run postinstall && npm run build",
+
+		"update": "npm run update:spa && npm run update:examples",
+		"update:spa": "cd spa && ncu -u",
+		"update:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && ncu -u'",
+
+		"postinstall": "npm run install:spa && npm run install:examples",
+		"install:spa": "cd spa && npm ci",
+		"install:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm ci'",
+
+		"build": "npm run build:spa && npm run build:examples",
+		"build:spa": "cd spa && npm run build",
+		"build:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm run build'",
+
+		"start": "cd server && (npm start & open http://localhost:5000 & wait) || :;"
+	}
+}
