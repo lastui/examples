@@ -32,24 +32,31 @@ async function context(req, res) {
 	return res.json({
 		available: [
 			{
-				name: 'broken',
+				id: 'broken',
 				url: 'examples/broken/build/main.min.js',
+				meta: {},
 			},
 			{
-				name: 'simple',
+				id: 'simple',
 				url: 'examples/simple/build/main.min.js',
+				meta: {},
 			},
 			{
-				name: 'localisation',
+				id: 'localisation',
 				url: 'examples/localisation/build/main.min.js',
+				meta: {},
 			},
 			{
-				name: 'layout',
+				id: 'layout',
 				url: 'examples/layout/build/main.min.js',
+				meta: {
+					info: 'Meta data info',
+				},
 			},
 			{
-				name: 'routing',
+				id: 'routing',
 				url: 'examples/routing/build/main.min.js',
+				meta: {},
 			}
 		],
 		entrypoint: 'layout',
