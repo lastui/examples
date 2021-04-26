@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Module } from '@lastui/rocker/platform';
 
-const Layout = () => {
+const Layout = (props) => {
 	return (
 		<React.Fragment>
 			<Module name="localisation" />
@@ -11,6 +11,7 @@ const Layout = () => {
 			</Module>
 			<Module name="broken" />
 			<Module name="routing" />
+			{`metadata of layout -> ${props.info}`}
 		</React.Fragment>
 	);
 }
