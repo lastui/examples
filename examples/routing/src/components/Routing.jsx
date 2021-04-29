@@ -25,7 +25,10 @@ const Routing = () => {
 					nav /
 				</Link>
 			</div>
-			{JSON.stringify(sharedState)}
+			<h3>shared state dump</h3>
+			<pre>
+			{JSON.stringify(sharedState, null, 2)}
+			</pre>
 		</div>
 	);
 }
