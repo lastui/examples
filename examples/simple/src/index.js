@@ -9,7 +9,7 @@ registerModule.call(__SANDBOX_SCOPE__, {
 	MainView: Simple,
 	reducer,
 	saga,
-	shared: {
-		'from_simple': 'with_love',
+	props: {
+		'info': 'declared property',
 	},
 });

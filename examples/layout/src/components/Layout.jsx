@@ -11,7 +11,6 @@ const Layout = (props) => {
 			</Module>
 			<Module name="broken" />
 			<Module name="routing" />
-			{`metadata of layout -> ${props.info}`}
 		</React.Fragment>
 	);
 }

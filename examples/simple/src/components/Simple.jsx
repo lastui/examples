@@ -8,10 +8,15 @@ const Simple = (props) => {
 
 	return (
 		<div className="simple">
-			{`elapsed ${count}...`}
+			<div>
+				{`elapsed ${count}...`}
+			</div>
 			<Title count={count}>
 				styled controled by props
 			</Title>
+			<div>
+				{`info: ${props.info}`}
+			</div>
 			<Module name="nonexistant" />
 			{props.children}
 		</div>
