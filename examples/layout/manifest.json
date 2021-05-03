@@ -1,0 +1,10 @@
+{
+	"entrypoint": "layout-provided",
+	"available": [
+		{
+			"id": "layout-provided",
+			"url": "/module.js",
+			"meta": {}
+		}
+	]
+}
