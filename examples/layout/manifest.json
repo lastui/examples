@@ -3,7 +3,8 @@
 	"available": [
 		{
 			"id": "layout-provided",
-			"url": "/module.js",
+			"program": "/module.js",
+			"locales": "/messages.json",
 			"meta": {}
 		}
 	]

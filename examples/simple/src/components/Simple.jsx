@@ -18,6 +18,7 @@ const Simple = (props) => {
 				{`info: ${props.info}`}
 			</div>
 			<Module name="nonexistant" />
+			{props.foo.bar}
 			{props.children}
 		</div>
 	);

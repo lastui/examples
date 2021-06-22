@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { actions } from '@lastui/rocker/platform';
 import { FormattedMessage, FormattedTime, useIntl } from 'react-intl';
 
@@ -8,6 +8,7 @@ const Localised = () => {
 	const dispatch = useDispatch();
 
 	const changeLanguage = (event) => {
+		//dispatch(actions.setAvailableModules([]));
 		dispatch(actions.setLanguage(event.target.value));
 	};
 
