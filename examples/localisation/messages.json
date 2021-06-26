@@ -1,8 +1,0 @@
-{
-	"en-US": {
-		"module.localisation.foo": "Foo Localised"
-	},
-	"cs-CZ": {
-		"module.localisation.foo": "Localizované Cosi"
-	}
-}
