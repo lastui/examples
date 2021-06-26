@@ -7,7 +7,7 @@
 		"@formatjs/intl-numberformat": "7.1.5",
 		"@formatjs/intl-relativetimeformat": "9.1.7",
 		"@lastui/dependencies": "1.1.27",
-		"@lastui/rocker": "0.3.102"
+		"@lastui/rocker": "0.3.107"
 	},
 	"repository": {
 		"type": "git",
