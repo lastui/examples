@@ -4,7 +4,9 @@
 		{
 			"id": "layout-provided",
 			"program": "/module.js",
-			"locales": "/messages.json",
+			"locales": {
+				"en-US": "/messages/en-US.json"
+			},
 			"meta": {}
 		}
 	]
