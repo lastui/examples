@@ -4,6 +4,6 @@ import Fallback from './components/Fallback';
 import { registerModule } from '@lastui/rocker/platform';
 
 registerModule.call(__SANDBOX_SCOPE__, {
-	MainView: Crashing,
-	ErrorView: Fallback,
+	Main: Crashing,
+	Error: Fallback,
 });

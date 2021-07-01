@@ -33,29 +33,45 @@ async function context(req, res) {
 		available: [
 			{
 				id: 'broken',
-				url: 'examples/broken/build/main.min.js',
+				program: 'examples/broken/build/main.min.js',
+				locales: {
+					'en-US': 'examples/broken/build/messages/en-US.json',
+				},
 				meta: {},
 			},
 			{
 				id: 'simple',
-				url: 'examples/simple/build/main.min.js',
+				program: 'examples/simple/build/main.min.js',
+				locales: {
+					'en-US': 'examples/simple/build/messages/en-US.json',
+				},
 				meta: {},
 			},
 			{
 				id: 'localisation',
-				url: 'examples/localisation/build/main.min.js',
+				program: 'examples/localisation/build/main.min.js',
+				locales: {
+					'en-US': 'examples/localisation/build/messages/en-US.json',
+					'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
+				},
 				meta: {},
 			},
 			{
 				id: 'layout',
-				url: 'examples/layout/build/main.min.js',
+				program: 'examples/layout/build/main.min.js',
+				locales: {
+					'en-US': 'examples/layout/build/messages/en-US.json',
+				},
 				meta: {
 					info: 'Meta data info',
 				},
 			},
 			{
 				id: 'routing',
-				url: 'examples/routing/build/main.min.js',
+				program: 'examples/routing/build/main.min.js',
+				locales: {
+					'en-US': 'examples/routing/build/messages/en-US.json',
+				},
 				meta: {},
 			}
 		],
