@@ -6,7 +6,7 @@ import './styles/index.css';
 import { registerModule } from '@lastui/rocker/platform';
 
 registerModule.call(__SANDBOX_SCOPE__, {
-	MainView: Simple,
+	Main: Simple,
 	reducer,
 	saga,
 	props: {

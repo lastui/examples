@@ -6,8 +6,8 @@
 	"dependencies": {
 		"@formatjs/intl-numberformat": "7.1.5",
 		"@formatjs/intl-relativetimeformat": "9.1.7",
-		"@lastui/dependencies": "1.1.27",
-		"@lastui/rocker": "0.3.108"
+		"@lastui/dependencies": "1.1.29",
+		"@lastui/rocker": "0.4.3"
 	},
 	"repository": {
 		"type": "git",
