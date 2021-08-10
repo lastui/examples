@@ -2,6 +2,82 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 
+let start_time = Date.now()
+
+let context_A = {
+	available: [
+		{
+			id: 'broken',
+			program: 'examples/broken/build/main.min.js',
+			locales: {
+				'en-US': 'examples/broken/build/messages/en-US.json',
+			},
+			meta: {},
+		},
+		{
+			id: 'simple',
+			program: 'examples/simple/build/main.min.js',
+			locales: {
+				'en-US': 'examples/simple/build/messages/en-US.json',
+			},
+			meta: {},
+		},
+		{
+			id: 'localisation',
+			program: 'examples/localisation/build/main.min.js',
+			locales: {
+				'en-US': 'examples/localisation/build/messages/en-US.json',
+				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
+			},
+			meta: {},
+		},
+		{
+			id: 'layout',
+			program: 'examples/layout/build/main.min.js',
+			locales: {
+				'en-US': 'examples/layout/build/messages/en-US.json',
+			},
+			meta: {
+				info: 'Meta data info',
+			},
+		},
+		{
+			id: 'routing',
+			program: 'examples/routing/build/main.min.js',
+			locales: {
+				'en-US': 'examples/routing/build/messages/en-US.json',
+			},
+			meta: {},
+		}
+	],
+	entrypoint: 'layout',
+}
+
+let context_B = {
+	available: [
+		{
+			id: 'localisation',
+			program: 'examples/localisation/build/main.min.js',
+			locales: {
+				'en-US': 'examples/localisation/build/messages/en-US.json',
+				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
+			},
+			meta: {},
+		},
+		{
+			id: 'layout',
+			program: 'examples/layout/build/main.min.js',
+			locales: {
+				'en-US': 'examples/layout/build/messages/en-US.json',
+			},
+			meta: {
+				info: 'Meta data info',
+			},
+		}
+	],
+	entrypoint: 'layout',
+}
+
 async function index(req, res) {
 	const filePath = path.join(__dirname, '../spa/build/index.html');
 	if (!fs.existsSync(filePath)) {
@@ -29,54 +105,13 @@ async function asset(req, res) {
 }
 
 async function context(req, res) {
-	return res.json({
-		available: [
-			{
-				id: 'broken',
-				program: 'examples/broken/build/main.min.js',
-				locales: {
-					'en-US': 'examples/broken/build/messages/en-US.json',
-				},
-				meta: {},
-			},
-			{
-				id: 'simple',
-				program: 'examples/simple/build/main.min.js',
-				locales: {
-					'en-US': 'examples/simple/build/messages/en-US.json',
-				},
-				meta: {},
-			},
-			{
-				id: 'localisation',
-				program: 'examples/localisation/build/main.min.js',
-				locales: {
-					'en-US': 'examples/localisation/build/messages/en-US.json',
-					'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
-				},
-				meta: {},
-			},
-			{
-				id: 'layout',
-				program: 'examples/layout/build/main.min.js',
-				locales: {
-					'en-US': 'examples/layout/build/messages/en-US.json',
-				},
-				meta: {
-					info: 'Meta data info',
-				},
-			},
-			{
-				id: 'routing',
-				program: 'examples/routing/build/main.min.js',
-				locales: {
-					'en-US': 'examples/routing/build/messages/en-US.json',
-				},
-				meta: {},
-			}
-		],
-		entrypoint: 'layout',
-	})
+	const now = Date.now()
+	let elapsed = now - start_time
+	if (elapsed > 15000) {
+		start_time = now
+		elapsed = 0
+	}
+	return res.json(elapsed === 0 ? context_B : context_A)
 }
 
 module.exports = function(existing) {

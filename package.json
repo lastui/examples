@@ -7,8 +7,8 @@
 		"update:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && ncu -u'",
 
 		"postinstall": "npm run install:spa && npm run install:examples",
-		"install:spa": "cd spa && npm ci",
-		"install:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm ci'",
+		"install:spa": "cd spa && npm ci --legacy-peer-deps",
+		"install:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm ci --legacy-peer-deps'",
 
 		"build": "npm run build:spa && npm run build:examples",
 		"build:spa": "cd spa && npm run build",
