@@ -1,36 +1,34 @@
 import React from 'react';
 
+import { Module } from '@lastui/rocker/platform';
+
 import { Route } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 const A = () => <div>A</div>
-const B = () => <div>B</div>
+const B = () => <Module name="subrouting" />
 
-const Routing = () => {
-	const sharedState = useSelector((state) => state.shared);
-
-	return (
+const Routing = () => (
+	<div>
+		Module routing here
+		<Route path="/b" component={B} />
+		<Route exact path="/" component={A} />
 		<div>
-			Module routing here
-			<Route path="/a" component={A} />
-			<Route exact path="/" component={B} />
-			<div>
-				<Link to="/a">
-					nav /a
-				</Link>
-			</div>
-			<div>
-				<Link to="/">
-					nav /
-				</Link>
-			</div>
-			<h3>shared state dump</h3>
-			<pre>
-			{JSON.stringify(sharedState, null, 2)}
-			</pre>
+			<Link to="/b">
+				nav /b
+			</Link>
 		</div>
-	);
-}
+		<div>
+			<Link to="/b/sub">
+				nav /b/sub
+			</Link>
+		</div>
+		<div>
+			<Link to="/">
+				nav /
+			</Link>
+		</div>
+	</div>
+);
 
 export default Routing;

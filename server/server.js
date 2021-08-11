@@ -8,7 +8,7 @@ let context_A = {
 	available: [
 		{
 			id: 'broken',
-			program: 'examples/broken/build/main.min.js',
+			program: '/examples/broken/build/main.min.js',
 			locales: {
 				'en-US': 'examples/broken/build/messages/en-US.json',
 			},
@@ -16,7 +16,7 @@ let context_A = {
 		},
 		{
 			id: 'simple',
-			program: 'examples/simple/build/main.min.js',
+			program: '/examples/simple/build/main.min.js',
 			locales: {
 				'en-US': 'examples/simple/build/messages/en-US.json',
 			},
@@ -24,7 +24,7 @@ let context_A = {
 		},
 		{
 			id: 'localisation',
-			program: 'examples/localisation/build/main.min.js',
+			program: '/examples/localisation/build/main.min.js',
 			locales: {
 				'en-US': 'examples/localisation/build/messages/en-US.json',
 				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
@@ -33,7 +33,7 @@ let context_A = {
 		},
 		{
 			id: 'layout',
-			program: 'examples/layout/build/main.min.js',
+			program: '/examples/layout/build/main.min.js',
 			locales: {
 				'en-US': 'examples/layout/build/messages/en-US.json',
 			},
@@ -43,12 +43,18 @@ let context_A = {
 		},
 		{
 			id: 'routing',
-			program: 'examples/routing/build/main.min.js',
+			program: '/examples/routing/build/main.min.js',
 			locales: {
 				'en-US': 'examples/routing/build/messages/en-US.json',
 			},
 			meta: {},
-		}
+		},
+		{
+			id: 'subrouting',
+			program: 'examples/subrouting/build/main.min.js',
+			locales: {},
+			meta: {},
+		},
 	],
 	entrypoint: 'layout',
 }
@@ -57,7 +63,7 @@ let context_B = {
 	available: [
 		{
 			id: 'localisation',
-			program: 'examples/localisation/build/main.min.js',
+			program: '/examples/localisation/build/main.min.js',
 			locales: {
 				'en-US': 'examples/localisation/build/messages/en-US.json',
 				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
@@ -66,7 +72,7 @@ let context_B = {
 		},
 		{
 			id: 'layout',
-			program: 'examples/layout/build/main.min.js',
+			program: '/examples/layout/build/main.min.js',
 			locales: {
 				'en-US': 'examples/layout/build/messages/en-US.json',
 			},
@@ -74,6 +80,36 @@ let context_B = {
 				info: 'Meta data info',
 			},
 		}
+	],
+	entrypoint: 'layout',
+}
+
+let context_C = {
+	available: [
+		{
+			id: 'layout',
+			program: '/examples/layout/build/main.min.js',
+			locales: {
+				'en-US': 'examples/layout/build/messages/en-US.json',
+			},
+			meta: {
+				info: 'Meta data info',
+			},
+		},
+		{
+			id: 'routing',
+			program: '/examples/routing/build/main.min.js',
+			locales: {
+				'en-US': 'examples/routing/build/messages/en-US.json',
+			},
+			meta: {},
+		},
+		{
+			id: 'subrouting',
+			program: '/examples/subrouting/build/main.min.js',
+			locales: {},
+			meta: {},
+		},
 	],
 	entrypoint: 'layout',
 }
@@ -88,7 +124,6 @@ async function index(req, res) {
 
 function file(filePath) {
 	return async function (req, res) {
-		console.log('in asset', req.url);
 		if (!fs.existsSync(filePath)) {
 			return res.status(404);
 		}
@@ -98,13 +133,16 @@ function file(filePath) {
 
 async function asset(req, res) {
 	if (path.extname(req.url).length === 0) {
-		return await index(req,res)
+		return await index(req, res)
 	} else {
 		return await file(path.join(__dirname, '..', req.url))(req, res);
 	}
 }
 
 async function context(req, res) {
+	return res.json(context_C)
+
+	/*
 	const now = Date.now()
 	let elapsed = now - start_time
 	if (elapsed > 15000) {
@@ -112,6 +150,7 @@ async function context(req, res) {
 		elapsed = 0
 	}
 	return res.json(elapsed === 0 ? context_B : context_A)
+	*/
 }
 
 module.exports = function(existing) {
