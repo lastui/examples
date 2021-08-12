@@ -10,7 +10,7 @@ let context_A = {
 			id: 'broken',
 			program: '/examples/broken/build/main.min.js',
 			locales: {
-				'en-US': 'examples/broken/build/messages/en-US.json',
+				'en-US': '/examples/broken/build/messages/en-US.json',
 			},
 			meta: {},
 		},
@@ -18,7 +18,7 @@ let context_A = {
 			id: 'simple',
 			program: '/examples/simple/build/main.min.js',
 			locales: {
-				'en-US': 'examples/simple/build/messages/en-US.json',
+				'en-US': '/examples/simple/build/messages/en-US.json',
 			},
 			meta: {},
 		},
@@ -26,8 +26,8 @@ let context_A = {
 			id: 'localisation',
 			program: '/examples/localisation/build/main.min.js',
 			locales: {
-				'en-US': 'examples/localisation/build/messages/en-US.json',
-				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
+				'en-US': '/examples/localisation/build/messages/en-US.json',
+				'cs-CZ': '/examples/localisation/build/messages/cs-CZ.json',
 			},
 			meta: {},
 		},
@@ -35,7 +35,7 @@ let context_A = {
 			id: 'layout',
 			program: '/examples/layout/build/main.min.js',
 			locales: {
-				'en-US': 'examples/layout/build/messages/en-US.json',
+				'en-US': '/examples/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -45,13 +45,13 @@ let context_A = {
 			id: 'routing',
 			program: '/examples/routing/build/main.min.js',
 			locales: {
-				'en-US': 'examples/routing/build/messages/en-US.json',
+				'en-US': '/examples/routing/build/messages/en-US.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'subrouting',
-			program: 'examples/subrouting/build/main.min.js',
+			program: '/examples/subrouting/build/main.min.js',
 			locales: {},
 			meta: {},
 		},
@@ -65,8 +65,8 @@ let context_B = {
 			id: 'localisation',
 			program: '/examples/localisation/build/main.min.js',
 			locales: {
-				'en-US': 'examples/localisation/build/messages/en-US.json',
-				'cs-CZ': 'examples/localisation/build/messages/cs-CZ.json',
+				'en-US': '/examples/localisation/build/messages/en-US.json',
+				'cs-CZ': '/examples/localisation/build/messages/cs-CZ.json',
 			},
 			meta: {},
 		},
@@ -74,7 +74,7 @@ let context_B = {
 			id: 'layout',
 			program: '/examples/layout/build/main.min.js',
 			locales: {
-				'en-US': 'examples/layout/build/messages/en-US.json',
+				'en-US': '/examples/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -90,7 +90,7 @@ let context_C = {
 			id: 'layout',
 			program: '/examples/layout/build/main.min.js',
 			locales: {
-				'en-US': 'examples/layout/build/messages/en-US.json',
+				'en-US': '/examples/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -100,7 +100,7 @@ let context_C = {
 			id: 'routing',
 			program: '/examples/routing/build/main.min.js',
 			locales: {
-				'en-US': 'examples/routing/build/messages/en-US.json',
+				'en-US': '/examples/routing/build/messages/en-US.json',
 			},
 			meta: {},
 		},
@@ -155,7 +155,6 @@ async function context(req, res) {
 
 module.exports = function(existing) {
 	const app = existing || express();
-	app.get('/', index);
 	app.get('/context', context);
 	app.get('/dependencies.dll.min.js', file(path.join(__dirname, '../spa/build/dependencies.dll.min.js')));
 	app.get('/platform.dll.min.js', file(path.join(__dirname, '../spa/build/platform.dll.min.js')));
