@@ -1,9 +1,6 @@
 import React from 'react';
 
-import { Module } from '@lastui/rocker/platform';
-
-import { Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Module, Route, Link } from '@lastui/rocker/platform';
 
 const A = () => <div>A</div>
 const B = () => <Module name="subrouting" />
