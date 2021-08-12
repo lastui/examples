@@ -1,19 +1,16 @@
 {
 	"scripts": {
-		"all": "npm run update && npm run postinstall && npm run build",
-
+		"upgrade": "npm run update && npm run postinstall && npm run build",
 		"update": "npm run update:spa && npm run update:examples",
 		"update:spa": "cd spa && ncu -u",
 		"update:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && ncu -u'",
-
-		"postinstall": "npm run install:spa && npm run install:examples",
-		"install:spa": "cd spa && npm ci --legacy-peer-deps",
-		"install:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm ci --legacy-peer-deps'",
-
+		"postinstall": "npm run install:spa && npm run install:examples && npm run install:server",
+		"install:spa": "cd spa && npm i --legacy-peer-deps",
+		"install:server": "cd server && npm i --legacy-peer-deps",
+		"install:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm i --legacy-peer-deps'",
 		"build": "npm run build:spa && npm run build:examples",
 		"build:spa": "cd spa && npm run build",
 		"build:examples": "ls -1 examples | xargs -r -I {} bash -c 'cd examples/{} && npm run build'",
-
 		"start": "cd server && (npm start & open http://localhost:5000 & wait) || :;"
 	}
 }
