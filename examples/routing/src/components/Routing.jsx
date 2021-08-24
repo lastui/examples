@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import { Module, Route, Link } from '@lastui/rocker/platform';
+import { Module, Route, Link } from "@lastui/rocker/platform";
 
-const A = () => <div>A</div>
-const B = () => <Module name="subrouting" />
+const A = () => <div>A</div>;
+const B = () => <Module name="subrouting" />;
 
 const Routing = () => (
 	<div>
@@ -11,19 +11,13 @@ const Routing = () => (
 		<Route path="/b" component={B} />
 		<Route exact path="/" component={A} />
 		<div>
-			<Link to="/b">
-				nav /b
-			</Link>
+			<Link to="/b">nav /b</Link>
 		</div>
 		<div>
-			<Link to="/b/sub">
-				nav /b/sub
-			</Link>
+			<Link to="/b/sub">nav /b/sub</Link>
 		</div>
 		<div>
-			<Link to="/">
-				nav /
-			</Link>
+			<Link to="/">nav /</Link>
 		</div>
 	</div>
 );
