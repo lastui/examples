@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require('express');
 const contexts = require('./context');
 
-let start_time = Date.now()
+let counter = 0
 
 
 
@@ -33,17 +33,9 @@ async function asset(req, res) {
 }
 
 async function context(req, res) {
-	return res.json(contexts.A)
-
-	/*
-	const now = Date.now()
-	let elapsed = now - start_time
-	if (elapsed > 15000) {
-		start_time = now
-		elapsed = 0
-	}
-	return res.json(elapsed === 0 ? contexts.B : contexts.A)
-	*/
+	contexts.current = counter
+	counter = (counter + 1) % 3
+	return res.json(contexts.current)
 }
 
 module.exports = function(existing) {

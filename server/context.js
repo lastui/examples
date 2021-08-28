@@ -2,7 +2,6 @@ const forge = require('node-forge');
 const fs = require('fs');
 const path = require('path');
 
-
 function sha256(file) {
 	const data = fs.readFileSync(path.join(__dirname, '..', file), 'utf8')
 	const md = forge.md.sha256.create();
@@ -11,7 +10,6 @@ function sha256(file) {
 }
 
 function hash_programs(context) {
-
 	return {
 		entrypoint: context.entrypoint,
 		available: context.available.map(function(item) {
@@ -160,8 +158,30 @@ let context_C = {
 	entrypoint: 'layout',
 }
 
-module.exports = {
-	A: hash_programs(context_A),
-	B: hash_programs(context_B),
-	C: hash_programs(context_C),
-}
+module.exports = (function() {
+	const A = hash_programs(context_A)
+	const B = hash_programs(context_B)
+	const C = hash_programs(context_C)
+	let selected = A
+	return {
+		get current() {
+			return selected
+		},
+		set current(idx) {
+			switch(idx) {
+				case 0: {
+					selected = A
+					break
+				}
+				case 1: {
+					selected = B
+					break
+				}
+				case 2: {
+					selected = C
+					break
+				}
+			}
+		},
+	}
+})()
