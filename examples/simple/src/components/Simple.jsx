@@ -12,7 +12,7 @@ const Simple = (props) => {
 				{`elapsed ${count}...`}
 			</div>
 			<Title count={count}>
-				styled controled by props
+				style controled by props
 			</Title>
 			<div>
 				{`info: ${props.info}`}
