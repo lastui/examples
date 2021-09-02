@@ -4,12 +4,8 @@
 		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
 	},
 	"dependencies": {
-		"@formatjs/intl-numberformat": "7.2.3",
-		"@formatjs/intl-relativetimeformat": "9.2.3",
-		"@lastui/dependencies": "1.1.40",
-		"@lastui/rocker": "0.4.59",
-		"webpack-cli": "^4.8.0",
-		"webpack-dev-server": "^4.0.0"
+		"@lastui/dependencies": "1.1.42",
+		"@lastui/rocker": "0.5.1"
 	},
 	"repository": {
 		"type": "git",
