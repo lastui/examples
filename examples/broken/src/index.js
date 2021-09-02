@@ -3,7 +3,7 @@ import Fallback from './components/Fallback';
 
 import { registerModule } from '@lastui/rocker/platform';
 
-registerModule.call(__SANDBOX_SCOPE__, {
+registerModule({
 	Main: Crashing,
 	Error: Fallback,
 });

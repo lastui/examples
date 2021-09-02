@@ -4,9 +4,9 @@
 		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
 	},
 	"dependencies": {
-		"@lastui/dependencies": "1.1.40",
-		"@lastui/rocker": "0.4.59",
+		"@lastui/dependencies": "1.1.42",
+		"@lastui/rocker": "0.5.1",
 		"error-overlay-webpack-plugin": "^1.0.0",
-		"webpack-dev-server": "^4.0.0"
+		"webpack-dev-server": "^4.1.0"
 	}
 }
