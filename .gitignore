@@ -2,3 +2,6 @@ node_modules
 build
 dev
 package-lock.json
+
+# Editors and IDEs
+.idea
