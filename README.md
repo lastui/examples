@@ -1,15 +1,14 @@
-# examples
+# Examples
 
-
-### to run the example
+### To run the examples
 
 ```bash
-npm run i
+npm install
 npm run build
 npm start
 ```
 
-### to develop module
+### To develop a module
 
 ```bash
 cd examples/simple
