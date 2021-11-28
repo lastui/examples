@@ -5,8 +5,6 @@ const contexts = require('./context');
 
 let counter = 0
 
-
-
 async function index(req, res) {
 	const filePath = path.join(__dirname, '../spa/build/index.html');
 	if (!fs.existsSync(filePath)) {
