@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Route } from '@lastui/rocker/platform';
 
-const Main = () => <div>Sub-A</div>
-const Sub = () => <div>Sub-B</div>
+const Main = () => <div>Main here</div>
+const Sub = () => <div>Sub here</div>
 
 const SubRouting = () => (
 	<React.Fragment>

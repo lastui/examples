@@ -1,16 +1,25 @@
 import React from "react";
 
+import { createPath, createLocation } from 'history';
+
 import { Module, Route, Link } from "@lastui/rocker/platform";
 
-const A = () => <div>A</div>;
-const B = () => <Module name="subrouting" />;
+const A = (props) => (
+	<div>A</div>
+);
+
+const B = (props) => (
+	<React.Fragment>
+		<div>B</div>
+		<Module name="subrouting" />
+	</React.Fragment>
+);
 
 const Routing = () => {
-	console.log("routing update");
 	return (
 		<div>
 			Module routing here
-			<Route path="/b" component={B} />
+			<Route path="/:section" component={B} />
 			<Route exact path="/" component={A} />
 			<div>
 				<Link to="/b">nav /b</Link>
