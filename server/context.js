@@ -31,41 +31,41 @@ let context_A = {
 		{
 			id: 'broken',
 			program: {
-				url: '/examples/broken/build/main.min.js'
+				url: '/modules/broken/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/broken/build/messages/en-US.json',
+				'en-US': '/modules/broken/build/messages/en-US.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'simple',
 			program: {
-				url: '/examples/simple/build/main.min.js',
+				url: '/modules/simple/build/main.min.js',
 			},
 			locales: {
-				'en-US': '/examples/simple/build/messages/en-US.json',
+				'en-US': '/modules/simple/build/messages/en-US.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'localisation',
 			program: {
-				url: '/examples/localisation/build/main.min.js'
+				url: '/modules/localisation/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/localisation/build/messages/en-US.json',
-				'cs-CZ': '/examples/localisation/build/messages/cs-CZ.json',
+				'en-US': '/modules/localisation/build/messages/en-US.json',
+				'cs-CZ': '/modules/localisation/build/messages/cs-CZ.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'layout',
 			program: {
-				url: '/examples/layout/build/main.min.js'
+				url: '/modules/layout/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/layout/build/messages/en-US.json',
+				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -74,17 +74,17 @@ let context_A = {
 		{
 			id: 'routing',
 			program: {
-				url: '/examples/routing/build/main.min.js'
+				url: '/modules/routing/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/routing/build/messages/en-US.json',
+				'en-US': '/modules/routing/build/messages/en-US.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'subrouting',
 			program: {
-				url: '/examples/subrouting/build/main.min.js',
+				url: '/modules/subrouting/build/main.min.js',
 			},
 			locales: {},
 			meta: {},
@@ -98,21 +98,21 @@ let context_B = {
 		{
 			id: 'localisation',
 			program: {
-				url: '/examples/localisation/build/main.min.js'
+				url: '/modules/localisation/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/localisation/build/messages/en-US.json',
-				'cs-CZ': '/examples/localisation/build/messages/cs-CZ.json',
+				'en-US': '/modules/localisation/build/messages/en-US.json',
+				'cs-CZ': '/modules/localisation/build/messages/cs-CZ.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'layout',
 			program: {
-				url: '/examples/layout/build/main.min.js'
+				url: '/modules/layout/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/layout/build/messages/en-US.json',
+				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -127,10 +127,10 @@ let context_C = {
 		{
 			id: 'layout',
 			program: {
-				url: '/examples/layout/build/main.min.js'
+				url: '/modules/layout/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/layout/build/messages/en-US.json',
+				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
 			meta: {
 				info: 'Meta data info',
@@ -139,17 +139,17 @@ let context_C = {
 		{
 			id: 'routing',
 			program: {
-				url: '/examples/routing/build/main.min.js'
+				url: '/modules/routing/build/main.min.js'
 			},
 			locales: {
-				'en-US': '/examples/routing/build/messages/en-US.json',
+				'en-US': '/modules/routing/build/messages/en-US.json',
 			},
 			meta: {},
 		},
 		{
 			id: 'subrouting',
 			program: {
-				url: '/examples/subrouting/build/main.min.js'
+				url: '/modules/subrouting/build/main.min.js'
 			},
 			locales: {},
 			meta: {},

@@ -12,6 +12,6 @@ registerModule({
 	middleware: middleware(),
 	saga,
 	props: {
-		'info': 'declared property',
+		'by_self': 'module simple declared this in registerModule',
 	},
 })
