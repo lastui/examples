@@ -6,7 +6,7 @@ const Layout = (props) => {
 	return (
 		<React.Fragment>
 			<Module name="localisation" />
-			<Module name="simple">
+			<Module name="simple" by_consumer="consumer layout declared this via <Module> component">
 				child of simple provided from layout
 			</Module>
 			<Module name="broken" />

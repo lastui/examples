@@ -6,15 +6,5 @@
 	"dependencies": {
 		"@lastui/dependencies": "1.1.61",
 		"@lastui/rocker": "0.7.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lastui/examples.git"
-	},
-	"author": "jan.cajthaml@gmail.com",
-	"license": "Apache-2.0",
-	"bugs": {
-		"url": "https://github.com/lastui/examples/issues"
-	},
-	"homepage": "https://github.com/lastui/examples#readme"
+	}
 }
