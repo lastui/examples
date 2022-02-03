@@ -4,8 +4,19 @@ import { Main } from "@lastui/rocker/runtime";
 import { getContext } from "./service";
 
 window.requestAnimationFrame(() => {
+	/*
+	// TODO once react 18 if RC
+	const root = ReactDOM.createRoot(document.getElementById("mount"));
+
 	const main = (
 		<Main fetchContext={getContext} />
 	);
-	ReactDOM.render(main, document.getElementById("mount"));
+	root.render(main);
+	*/
+
+	const main = (
+		<Main fetchContext={getContext} />
+	);
+	ReactDOM.render(main, document.getElementById("mount"))
+
 })
