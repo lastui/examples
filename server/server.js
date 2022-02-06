@@ -42,7 +42,7 @@ module.exports = function(existing) {
 	app.get('/dependencies.dll.min.js', file(path.join(__dirname, '../spa/build/dependencies.dll.min.js')));
 	app.get('/platform.dll.min.js', file(path.join(__dirname, '../spa/build/platform.dll.min.js')));
 	app.get('/runtime.dll.min.js', file(path.join(__dirname, '../spa/build/runtime.dll.min.js')));
-	app.get('/main.js', file(path.join(__dirname, '../spa/build/main.js')));
+	app.get('/main.min.js', file(path.join(__dirname, '../spa/build/main.min.js')));
 	app.get('/*', asset);
 	app.use(express.json);
 	return app;
