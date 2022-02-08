@@ -4,7 +4,7 @@
 		"start": "NODE_ENV=development node ./node_modules/@lastui/rocker/bin/webpack.js"
 	},
 	"dependencies": {
-		"@lastui/dependencies": "1.1.61",
-		"@lastui/rocker": "0.7.5"
+		"@lastui/dependencies": "1.1.62",
+		"@lastui/rocker": "0.7.13"
 	}
 }
