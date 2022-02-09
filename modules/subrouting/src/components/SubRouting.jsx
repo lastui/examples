@@ -11,7 +11,7 @@ const SubRouting = () => (
 			Module Sub-Routing here
 		</div>
 		<Route path="/sub" component={Sub} />
-		<Route exact path="/" component={Main} />
+		<Route index component={Main} />
 	</React.Fragment>
 );
 
