@@ -2,7 +2,7 @@ import React from "react";
 
 import { createPath, createLocation } from 'history';
 
-import { Module, Route, Link } from "@lastui/rocker/platform";
+import { Module, Route, Redirect, Link } from "@lastui/rocker/platform";
 
 const A = (props) => (
 	<div>A</div>
@@ -19,8 +19,9 @@ const Routing = () => {
 	return (
 		<div>
 			Module routing here
-			<Route path="/:section" component={B} />
-			<Route exact path="/" component={A} />
+			<Route path="/b" component={B} />
+			<Route path="/a" component={A} />
+			<Redirect from="/" to="/a" />
 			<div>
 				<Link to="/b">nav /b</Link>
 			</div>
