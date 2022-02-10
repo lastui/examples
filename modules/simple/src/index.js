@@ -9,7 +9,7 @@ import { registerModule } from '@lastui/rocker/platform';
 registerModule({
 	Main: Simple,
 	reducer,
-	middleware: middleware(),
+	middleware,
 	saga,
 	props: {
 		'by_self': 'module simple declared this in registerModule',
