@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Main } from "@lastui/rocker/runtime";
+import { Main } from "@lastui/rocker/bootstrap";
 import { getContext } from "./service";
 
 window.requestAnimationFrame(() => {
