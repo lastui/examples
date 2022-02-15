@@ -11,6 +11,6 @@ npm start
 ### To develop a module
 
 ```bash
-cd examples/simple
+cd modules/simple
 npm start
 ```
