@@ -1,3 +1,7 @@
 {
-	"module.localisation.foo": "Localizované Cosi"
+	"module": {
+		"localisation": {
+			"foo": "Localizované Cosi"
+		}
+	}
 }
