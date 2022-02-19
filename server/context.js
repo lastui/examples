@@ -39,6 +39,14 @@ let context_A = {
 			meta: {},
 		},
 		{
+			id: 'self-state-ioc',
+			program: {
+				url: '/modules/self-state-ioc/build/main.min.js'
+			},
+			locales: {},
+			meta: {},
+		},
+		{
 			id: 'simple',
 			program: {
 				url: '/modules/simple/build/main.min.js',
@@ -104,6 +112,14 @@ let context_B = {
 				'en-US': '/modules/localisation/build/messages/en-US.json',
 				'cs-CZ': '/modules/localisation/build/messages/cs-CZ.json',
 			},
+			meta: {},
+		},
+		{
+			id: 'self-state-ioc',
+			program: {
+				url: '/modules/self-state-ioc/build/main.min.js'
+			},
+			locales: {},
 			meta: {},
 		},
 		{
