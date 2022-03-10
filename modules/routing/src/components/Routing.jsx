@@ -1,12 +1,16 @@
 import React from "react";
 
-import { createPath, createLocation } from 'history';
+import { createPath, createLocation } from "history";
 
-import { Module, Route, Redirect, Link } from "@lastui/rocker/platform";
+import {
+	Module,
+	Route,
+	Redirect,
+	Link,
+	useHistory,
+} from "@lastui/rocker/platform";
 
-const A = (props) => (
-	<div>A</div>
-);
+const A = (props) => <div>A</div>;
 
 const B = (props) => (
 	<React.Fragment>
@@ -16,6 +20,7 @@ const B = (props) => (
 );
 
 const Routing = () => {
+	const history = useHistory();
 	return (
 		<div>
 			Module routing here
@@ -26,7 +31,15 @@ const Routing = () => {
 				<Link to="/b">nav /b</Link>
 			</div>
 			<div>
-				<Link to="/b/sub">nav /b/sub</Link>
+				<a
+					href="/never/should/happen"
+					onClick={(e) => {
+						e.preventDefault();
+						history.push("/b/sub");
+					}}
+				>
+					nav /b/sub
+				</a>
 			</div>
 			<div>
 				<Link to="/">nav /</Link>
