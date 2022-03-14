@@ -6,6 +6,7 @@ const Layout = (props) => {
 	return (
 		<React.Fragment>
 			<Module name="self-state-ioc" />
+			<Module name="failing-saga-boundary" />
 			<Module name="localisation" />
 			<Module name="simple" by_consumer="consumer layout declared this via <Module> component">
 				child of simple provided from layout

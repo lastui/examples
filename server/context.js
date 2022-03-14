@@ -47,6 +47,14 @@ let context_A = {
 			meta: {},
 		},
 		{
+			id: 'failing-saga-boundary',
+			program: {
+				url: '/modules/failing-saga-boundary/build/main.min.js'
+			},
+			locales: {},
+			meta: {},
+		},
+		{
 			id: 'simple',
 			program: {
 				url: '/modules/simple/build/main.min.js',
