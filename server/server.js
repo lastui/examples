@@ -6,7 +6,7 @@ const contexts = require('./context');
 let counter = 0
 
 async function index(req, res) {
-	const filePath = path.join(__dirname, '../spa/build/index.html');
+	const filePath = path.join(__dirname, '../spa/build/spa/index.html');
 	if (!fs.existsSync(filePath)) {
 		return res.status(404);
 	}
@@ -39,10 +39,10 @@ async function context(req, res) {
 module.exports = function(existing) {
 	const app = existing || express();
 	app.get('/context', context);
-	app.get('/dependencies.dll.min.js', file(path.join(__dirname, '../spa/build/dependencies.dll.min.js')));
-	app.get('/platform.dll.min.js', file(path.join(__dirname, '../spa/build/platform.dll.min.js')));
-	app.get('/bootstrap.dll.min.js', file(path.join(__dirname, '../spa/build/bootstrap.dll.min.js')));
-	app.get('/main.min.js', file(path.join(__dirname, '../spa/build/main.min.js')));
+	app.get('/spa/dependencies.dll.min.js', file(path.join(__dirname, '../spa/build/spa/dependencies.dll.min.js')));
+	app.get('/spa/platform.dll.min.js', file(path.join(__dirname, '../spa/build/spa/platform.dll.min.js')));
+	app.get('/spa/bootstrap.dll.min.js', file(path.join(__dirname, '../spa/build/spa/bootstrap.dll.min.js')));
+	app.get('/spa/main.min.js', file(path.join(__dirname, '../spa/build/spa/main.min.js')));
 	app.get('/*', asset);
 	app.use(express.json);
 	return app;
