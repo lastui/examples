@@ -5,6 +5,6 @@
 	},
 	"dependencies": {
 		"@lastui/dependencies": "1.1.62",
-		"@lastui/rocker": "0.8.26"
+		"@lastui/rocker": "0.8.27"
 	}
 }
