@@ -26,6 +26,7 @@ function hash_programs(context) {
 	}
 }
 
+
 let context_A = {
 	available: [
 		{
@@ -188,24 +189,8 @@ module.exports = (function() {
 	const C = hash_programs(context_C)
 	let selected = A
 	return {
-		get current() {
-			return selected
-		},
-		set current(idx) {
-			switch(idx) {
-				case 0: {
-					selected = A
-					break
-				}
-				case 1: {
-					selected = B
-					break
-				}
-				case 2: {
-					selected = C
-					break
-				}
-			}
-		},
+		A,
+		B,
+		C,
 	}
 })()

@@ -1,7 +1,6 @@
-import Localised from './components/Localised';
-
-import { registerModule } from '@lastui/rocker/platform';
+import Localised from "./components/Localised";
+import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-	Main: Localised,
+  Main: Localised,
 });
