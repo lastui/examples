@@ -8,7 +8,6 @@ const Localised = () => {
 	const dispatch = useDispatch();
 
 	const changeLanguage = (event) => {
-		//dispatch(actions.setAvailableModules([]));
 		dispatch(actions.setLanguage(event.target.value));
 	};
 

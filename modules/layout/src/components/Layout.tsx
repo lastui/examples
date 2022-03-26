@@ -4,6 +4,7 @@ import { Module } from '@lastui/rocker/platform';
 
 const Layout = (props: any) => (
 	<React.Fragment>
+		{"layout here"}
 		<Module name="self-state-ioc" />
 		<Module name="failing-saga-boundary" />
 		<Module name="localisation" />

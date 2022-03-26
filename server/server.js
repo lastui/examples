@@ -2,8 +2,8 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 const contexts = require('./context');
-
-let counter = 0
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 async function index(req, res) {
 	const filePath = path.join(__dirname, '../spa/build/spa/index.html');
@@ -31,13 +31,21 @@ async function asset(req, res) {
 }
 
 async function context(req, res) {
-	contexts.current = counter
-	counter = (counter + 1) % 3
-	return res.json(contexts.current)
+	req.session.page_views = (req.session.page_views + 1) % 3;
+	switch (req.session.page_views) {
+		case 0:
+			return res.json(contexts.A)
+		case 1:
+			return res.json(contexts.B)
+		default:
+			return res.json(contexts.C)
+	}
 }
 
 module.exports = function(existing) {
 	const app = existing || express();
+	app.use(cookieParser());
+	app.use(session({secret: "Shh, its a secret!"}));
 	app.get('/context', context);
 	app.get('/spa/dependencies.dll.min.js', file(path.join(__dirname, '../spa/build/spa/dependencies.dll.min.js')));
 	app.get('/spa/platform.dll.min.js', file(path.join(__dirname, '../spa/build/spa/platform.dll.min.js')));

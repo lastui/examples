@@ -11,7 +11,7 @@ function* lazyBreak() {
 }
 
 function* fail() {
-  throw new Error('saga is of failing-saga-boundary throws');
+  throw new Error('saga of failing-saga-boundary throws');
 }
 
 export default lazyBreak;
