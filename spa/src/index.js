@@ -15,8 +15,7 @@ window.requestAnimationFrame(() => {
 	*/
 
 	const main = (
-		<Main fetchContext={getContext} />
+		<Main fetchContext={getContext} contextRefreshInterval={5 * 1000} />
 	);
-	ReactDOM.render(main, document.getElementById("mount"))
-
-})
+	ReactDOM.render(main, document.getElementById("mount"));
+});
