@@ -1,10 +1,11 @@
 {
 	"scripts": {
 		"build": "rocker build",
-		"start": "rocker start"
+		"start": "rocker start",
+		"test": "rocker test"
 	},
 	"dependencies": {
 		"@lastui/dependencies": "1.1.62",
-		"@lastui/rocker": "0.9.13"
+		"@lastui/rocker": "0.9.25"
 	}
 }
