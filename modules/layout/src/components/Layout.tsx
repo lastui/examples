@@ -13,6 +13,27 @@ const Layout = (props: any) => {
 
 	return (
 		<React.Fragment>
+			<section
+				style={{
+					padding: '0.5em',
+					background: 'rgba(0,0,0,.1)',
+					marginBottom: '0.5em',
+				}}
+			>
+				<p
+					style={{
+						margin: 0,
+					}}
+				>	Platform constant visible from module
+				</p>
+				<pre
+					style={{
+						margin: 0,
+					}}
+				>
+					{JSON.stringify(constants, null, 4)}
+				</pre>
+			</section>
 			<button onClick={refreshContext}>refresh context</button>
 			<Module name="self-state-ioc" />
 			<Module name="failing-saga-boundary" />
