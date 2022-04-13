@@ -6,7 +6,7 @@
 	},
 	"dependencies": {
 		"@lastui/dependencies": "1.1.62",
-		"@lastui/rocker": "0.9.31",
+		"@lastui/rocker": "0.9.32",
 		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
 	}
 }
