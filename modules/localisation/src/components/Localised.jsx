@@ -1,20 +1,15 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { constants } from '@lastui/rocker/platform';
+import { actions } from '@lastui/rocker/platform';
 import { FormattedMessage, FormattedTime, useIntl } from 'react-intl';
 
 const Localised = () => {
 	const intl = useIntl()
 	const dispatch = useDispatch();
 
-	const changeLanguage = (event) => {
-		dispatch({
-			type: constants.SET_LANGUAGE,
-			payload: {
-				language: event.target.value,
-			},
-		});
-	};
+	const changeLanguage = React.useCallback((event) => {
+		dispatch(actions.setLanguage(event.target.value));
+	}, [dispatch]);
 
 	return (
 		<div>
