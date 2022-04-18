@@ -11,7 +11,4 @@ registerModule({
 	reducer,
 	middleware,
 	saga,
-	props: {
-		'by_self': 'module simple declared this in registerModule',
-	},
 })

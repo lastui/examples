@@ -15,9 +15,6 @@ const Simple = (props) => {
 				style controled by props
 			</Title>
 			<div>
-				{`declared property via self: ${props.by_self}`}
-			</div>
-			<div>
 				{`declared property via consumer: ${props.by_consumer}`}
 			</div>
 			<Module name="nonexistant" />
