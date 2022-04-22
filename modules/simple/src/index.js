@@ -8,7 +8,7 @@ import { registerModule } from '@lastui/rocker/platform';
 
 registerModule({
 	Main: Simple,
-	reducer,
+	reducer: reducer,
 	middleware,
 	saga,
 })
