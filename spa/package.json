@@ -1,12 +1,13 @@
 {
-	"scripts": {
-		"build": "rocker build",
-		"start": "rocker start",
-		"test": "rocker test"
-	},
-	"dependencies": {
-		"@lastui/dependencies": "1.2.0",
-		"@lastui/rocker": "0.10.9",
-		"babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
-	}
+  "scripts": {
+    "build": "rocker build",
+    "start": "rocker start",
+    "test": "rocker test",
+    "lint": "rocker lint"
+  },
+  "dependencies": {
+    "@lastui/dependencies": "1.2.0",
+    "@lastui/rocker": "0.10.12",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
+  }
 }

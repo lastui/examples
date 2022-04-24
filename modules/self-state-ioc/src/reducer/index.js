@@ -1,5 +1,5 @@
-import fixed from './fixed';
+import fixed from "./fixed";
 
 export default {
-	fixed,
+  fixed,
 };

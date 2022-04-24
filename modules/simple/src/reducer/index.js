@@ -1,5 +1,5 @@
-import ticker from './ticker';
+import ticker from "./ticker";
 
 export default {
-	ticker,
+  ticker,
 };
