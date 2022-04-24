@@ -4,11 +4,9 @@ import { Main } from "@lastui/rocker/bootstrap";
 import { getContext } from "./service";
 
 window.requestAnimationFrame(() => {
-	const root = ReactDOM.createRoot(document.getElementById("mount"));
+  const root = ReactDOM.createRoot(document.getElementById("mount"));
 
-	const main = (
-		<Main fetchContext={getContext} contextRefreshInterval={5 * 1000} />
-	);
+  const main = <Main fetchContext={getContext} contextRefreshInterval={5 * 1000} />;
 
-	root.render(main);
+  root.render(main);
 });

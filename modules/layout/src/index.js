@@ -1,7 +1,7 @@
-import Layout from './components/Layout';
+import Layout from "./components/Layout";
 
-import { registerModule } from '@lastui/rocker/platform';
+import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-	Main: Layout,
+  Main: Layout,
 });

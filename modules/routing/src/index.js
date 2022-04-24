@@ -1,7 +1,7 @@
-import Routing from './components/Routing';
+import Routing from "./components/Routing";
 
-import { registerModule } from '@lastui/rocker/platform';
+import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-	Main: Routing,
+  Main: Routing,
 });

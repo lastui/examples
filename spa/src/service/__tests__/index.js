@@ -1,7 +1,7 @@
-import { getContext } from '../'
+import { getContext } from "../";
 
-describe('getContext', () => {
-	it('should be a function', () => {
-		expect(typeof getContext).toEqual('function');
-	})
-})
+describe("getContext", () => {
+  it("should be a function", () => {
+    expect(typeof getContext).toEqual("function");
+  });
+});

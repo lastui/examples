@@ -14,6 +14,9 @@
 		"test": "npm run test:spa && npm run test:modules",
 		"test:spa": "cd spa && npm test",
 		"test:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm test'",
+		"lint": "npm run lint:spa && npm run lint:modules",
+		"lint:spa": "cd spa && npm run lint",
+		"lint:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm run lint'",
 		"start": "cd server && (npm start & (sleep 1 && open http://localhost:9000) & wait) || :;"
 	},
 	"repository": {

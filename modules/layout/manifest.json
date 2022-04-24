@@ -1,15 +1,15 @@
 {
-	"entrypoint": "layout-provided",
-	"available": [
-		{
-			"id": "layout-provided",
-			"program": {
-				"url": "/main.js"
-			},
-			"locales": {
-				"en-US": "/messages/en-US.json"
-			},
-			"meta": {}
-		}
-	]
+  "entrypoint": "layout-provided",
+  "available": [
+    {
+      "id": "layout-provided",
+      "program": {
+        "url": "/main.js"
+      },
+      "locales": {
+        "en-US": "/messages/en-US.json"
+      },
+      "meta": {}
+    }
+  ]
 }

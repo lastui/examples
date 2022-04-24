@@ -1,7 +1,7 @@
-import SubRouting from './components/SubRouting';
+import SubRouting from "./components/SubRouting";
 
-import { registerModule } from '@lastui/rocker/platform';
+import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-	Main: SubRouting,
+  Main: SubRouting,
 });

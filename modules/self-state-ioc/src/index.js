@@ -1,9 +1,9 @@
-import Probe from './components/Probe';
-import reducer from './reducer';
+import Probe from "./components/Probe";
+import reducer from "./reducer";
 
-import { registerModule } from '@lastui/rocker/platform';
+import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-	Main: Probe,
-	reducer,
-})
+  Main: Probe,
+  reducer,
+});
