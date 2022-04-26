@@ -13,14 +13,25 @@ function hash_programs(context) {
 	return {
 		entrypoint: context.entrypoint,
 		available: context.available.map(function(item) {
-			return {
-				id: item.id,
-				program: item.program ? {
-					url: item.program.url,
-					sha256: sha256(item.program.url),
-				} : undefined,
-				locales: item.locales,
-				meta: item.meta,
+			try {
+				return {
+					id: item.id,
+					program: item.program ? {
+						url: item.program.url,
+						sha256: sha256(item.program.url),
+					} : undefined,
+					locales: item.locales,
+					meta: item.meta,
+				}
+			} catch(err) {
+				return {
+					id: item.id,
+					program: item.program ? {
+						url: item.program.url,
+					} : undefined,
+					locales: item.locales,
+					meta: item.meta,
+				}
 			}
 		})
 	}

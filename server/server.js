@@ -15,10 +15,10 @@ async function index(req, res) {
 
 function file(filePath) {
 	return async function (req, res) {
-		if (!fs.existsSync(filePath)) {
-			return res.status(404);
+		if (fs.existsSync(filePath)) {
+			return res.sendFile(filePath);
 		}
-		return res.sendFile(filePath);
+		// intentional timeout
 	}
 }
 
