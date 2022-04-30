@@ -9,6 +9,6 @@
     "@lastui/dependencies": "1.2.5"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.11.10"
+    "@lastui/rocker": "0.11.11"
   }
 }
