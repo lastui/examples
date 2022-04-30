@@ -12,6 +12,7 @@ function sha256(file) {
 function hash_programs(context) {
 	return {
 		entrypoint: context.entrypoint,
+		environment: context.environment,
 		available: context.available.map(function(item) {
 			try {
 				return {
@@ -21,7 +22,7 @@ function hash_programs(context) {
 						sha256: sha256(item.program.url),
 					} : undefined,
 					locales: item.locales,
-					meta: item.meta,
+					props: item.props,
 				}
 			} catch(err) {
 				return {
@@ -30,7 +31,7 @@ function hash_programs(context) {
 						url: item.program.url,
 					} : undefined,
 					locales: item.locales,
-					meta: item.meta,
+					props: item.props,
 				}
 			}
 		})
@@ -48,7 +49,7 @@ let context_A = {
 			locales: {
 				'en-US': '/modules/broken/build/messages/en-US.json',
 			},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'self-state-ioc',
@@ -56,7 +57,7 @@ let context_A = {
 				url: '/modules/self-state-ioc/build/main.min.js'
 			},
 			locales: {},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'failing-saga-boundary',
@@ -64,7 +65,7 @@ let context_A = {
 				url: '/modules/failing-saga-boundary/build/main.min.js'
 			},
 			locales: {},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'simple',
@@ -74,7 +75,7 @@ let context_A = {
 			locales: {
 				'en-US': '/modules/simple/build/messages/en-US.json',
 			},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'localisation',
@@ -85,7 +86,7 @@ let context_A = {
 				'en-US': '/modules/localisation/build/messages/en-US.json',
 				'cs-CZ': '/modules/localisation/build/messages/cs-CZ.json',
 			},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'layout',
@@ -95,7 +96,7 @@ let context_A = {
 			locales: {
 				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
-			meta: {
+			props: {
 				info: 'Meta data info',
 			},
 		},
@@ -107,7 +108,7 @@ let context_A = {
 			locales: {
 				'en-US': '/modules/routing/build/messages/en-US.json',
 			},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'subrouting',
@@ -115,9 +116,12 @@ let context_A = {
 				url: '/modules/subrouting/build/main.min.js',
 			},
 			locales: {},
-			meta: {},
+			props: {},
 		},
 	],
+	environment: {
+		"context.name": "A",
+	},
 	entrypoint: 'layout',
 }
 
@@ -140,7 +144,7 @@ let context_B = {
 				url: '/modules/self-state-ioc/build/main.min.js'
 			},
 			locales: {},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'layout',
@@ -150,11 +154,14 @@ let context_B = {
 			locales: {
 				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
-			meta: {
+			props: {
 				info: 'Meta data info',
 			},
 		}
 	],
+	environment: {
+		"context.name": "B",
+	},
 	entrypoint: 'layout',
 }
 
@@ -168,7 +175,7 @@ let context_C = {
 			locales: {
 				'en-US': '/modules/layout/build/messages/en-US.json',
 			},
-			meta: {
+			props: {
 				info: 'Meta data info',
 			},
 		},
@@ -180,7 +187,7 @@ let context_C = {
 			locales: {
 				'en-US': '/modules/routing/build/messages/en-US.json',
 			},
-			meta: {},
+			props: {},
 		},
 		{
 			id: 'subrouting',
@@ -188,9 +195,12 @@ let context_C = {
 				url: '/modules/subrouting/build/main.min.js'
 			},
 			locales: {},
-			meta: {},
+			props: {},
 		},
 	],
+	environment: {
+		"context.name": "C",
+	},
 	entrypoint: 'layout',
 }
 
