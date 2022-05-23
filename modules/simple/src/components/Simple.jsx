@@ -7,7 +7,7 @@ const Simple = (props) => {
   const count = useSelector((state) => state.ticker);
 
   return (
-    <div className="simple">
+    <div className="notification simple">
       <div>{`elapsed ${count}...`}</div>
       <Title count={count}>style controled by props</Title>
       <div>{`declared property via consumer: ${props.by_consumer}`}</div>

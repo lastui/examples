@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { Main } from "@lastui/rocker/bootstrap";
 import { getContext } from "./service";
 
-window.requestAnimationFrame(() => {
-  const root = ReactDOM.createRoot(document.getElementById("mount"));
+import "bulma/css/bulma.css";
 
-  const main = <Main fetchContext={getContext} contextRefreshInterval={60 * 1000} />;
+const root = ReactDOM.createRoot(document.getElementById("mount"));
 
-  root.render(main);
-});
+const main = <Main fetchContext={getContext} contextRefreshInterval={60 * 1000} />;
+
+root.render(main);
