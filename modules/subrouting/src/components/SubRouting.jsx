@@ -25,8 +25,11 @@ const SubRouting = () => {
   const dispatch = useDispatch();
   const match = useRouteMatch("/:part");
 
-  const dispatchLocalShared = React.useCallback(() => dispatch(actions.setLocalShared({ 'info': 'here' })), [dispatch]);
-  const dispatchGlobalShared = React.useCallback(() => dispatch(actions.setGlobalShared({ 'routing': 'exits' })), [dispatch]);
+  const dispatchLocalShared = React.useCallback(() => dispatch(actions.setLocalShared({ info: "here" })), [dispatch]);
+  const dispatchGlobalShared = React.useCallback(
+    () => dispatch(actions.setGlobalShared({ routing: "exits" })),
+    [dispatch],
+  );
 
   React.useEffect(() => {
     dispatchLocalShared();
@@ -36,13 +39,9 @@ const SubRouting = () => {
   return (
     <React.Fragment>
       <div></div>
-      <section
-        style={{
-          padding: "0.5em",
-          background: "rgba(0,0,0,.1)",
-        }}>
+      <section className="content is-small">
         <p>Module Sub-Routing here match is</p>
-        <code>{JSON.stringify(match, null, 4)}</code>
+        <pre>{JSON.stringify(match, null, 4)}</pre>
       </section>
       <Route path="/sub" component={Sub} />
       <Route index component={Main} />

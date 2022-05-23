@@ -1,23 +1,28 @@
 {
 	"scripts": {
-		"upgrade": "npm run update && npm run postinstall && npm run build",
-		"update": "npm run update:spa && npm run update:modules",
-		"update:spa": "cd spa && ncu -u",
-		"update:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && ncu -u'",
+		"upgrade": "npm run update && npm i && npm run build",
+		"update": "ncu -u && npm run update:spa && npm run update:modules",
+		"update:spa": "ncu --cwd=spa -u",
+		"update:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'ncu --cwd={} -u'",
 		"postinstall": "npm run install:spa && npm run install:modules && npm run install:server",
-		"install:spa": "cd spa && npm i",
-		"install:server": "cd server && npm i",
-		"install:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm i'",
+		"install:spa": "npm --prefix=spa i",
+		"install:server": "npm --prefix=server i",
+		"install:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'npm --prefix={} i'",
 		"build": "npm run build:spa && npm run build:modules",
 		"build:spa": "cd spa && npm run build",
-		"build:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm run build'",
+		"build:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'rocker --cwd={} build'",
 		"test": "npm run test:spa && npm run test:modules",
 		"test:spa": "cd spa && npm test",
-		"test:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm test'",
+		"test:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'rocker --cwd={} test'",
 		"lint": "npm run lint:spa && npm run lint:modules",
 		"lint:spa": "cd spa && npm run lint",
-		"lint:modules": "ls -1 modules | xargs -r -I {} bash -c 'cd modules/{} && npm run lint'",
-		"start": "cd server && (npm start & (sleep 1 && open http://localhost:9000) & wait) || :;"
+		"lint:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'rocker --cwd={} lint'",
+		"start": "rocker start"
+	},
+	"devDependencies": {
+		"@lastui/dependencies": "1.2.7",
+		"@lastui/rocker": "0.12.18",
+		"bulma": "0.9.4"
 	},
 	"repository": {
 		"type": "git",

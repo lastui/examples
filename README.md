@@ -16,6 +16,14 @@ npm run upgrade
 
 ### To develop a module
 
+all at same time
+
+```bash
+npm start
+```
+
+single module
+
 ```bash
 cd modules/simple
 npm start
