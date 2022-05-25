@@ -21,7 +21,7 @@
 	},
 	"devDependencies": {
 		"@lastui/dependencies": "1.2.7",
-		"@lastui/rocker": "0.12.18",
+		"@lastui/rocker": "0.12.20",
 		"bulma": "0.9.4"
 	},
 	"repository": {
