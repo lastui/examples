@@ -17,11 +17,12 @@
 		"lint": "npm run lint:spa && npm run lint:modules",
 		"lint:spa": "cd spa && npm run lint",
 		"lint:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'rocker --cwd={} lint'",
-		"start": "rocker start"
+		"start": "rocker start",
+		"serve": "cd server && npm start"
 	},
 	"devDependencies": {
 		"@lastui/dependencies": "1.2.8",
-		"@lastui/rocker": "0.12.20",
+		"@lastui/rocker": "0.12.25",
 		"bulma": "0.9.4"
 	},
 	"repository": {

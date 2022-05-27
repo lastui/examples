@@ -18,6 +18,7 @@ function file(filePath) {
     if (fs.existsSync(filePath)) {
       return res.sendFile(filePath);
     }
+    console.log('not found', filePath)
     // intentional timeout
   };
 }
@@ -51,6 +52,7 @@ module.exports = function (existing) {
   app.get("/spa/platform.dll.min.js", file(path.join(__dirname, "../spa/build/spa/platform.dll.min.js")));
   app.get("/spa/bootstrap.dll.min.js", file(path.join(__dirname, "../spa/build/spa/bootstrap.dll.min.js")));
   app.get("/spa/main.min.js", file(path.join(__dirname, "../spa/build/spa/main.min.js")));
+  app.get("/spa/main.css", file(path.join(__dirname, "../spa/build/spa/main.css")));
   app.get("/*", asset);
   app.use(express.json);
   return app;
