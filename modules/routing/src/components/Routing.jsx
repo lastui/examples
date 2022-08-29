@@ -1,8 +1,7 @@
 import React from "react";
 
-import { createPath, createLocation } from "history";
-
-import { Module, Route, Redirect, Link, useHistory } from "@lastui/rocker/platform";
+import { Link, Route, Routes, useNavigate } from "react-router-dom"
+import { Module } from "@lastui/rocker/platform";
 
 const A = (props) => <div>A</div>;
 
@@ -14,22 +13,23 @@ const B = (props) => (
 );
 
 const Routing = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <div>
       Module routing here
-      <Route path="/b" component={B} />
-      <Route path="/a" component={A} />
-      <Redirect from="/" to="/a" />
+      <Routes>
+        <Route path="b/*" element={<B />} />
+        <Route path="*" element={<A />} />
+      </Routes>
       <div>
-        <Link to="/b">nav /b</Link>
+        <Link to="b">nav /b</Link>
       </div>
       <div>
         <a
           href="/never/should/happen"
           onClick={(e) => {
             e.preventDefault();
-            history.push("/b/sub");
+            navigate("/b/sub");
           }}>
           nav /b/sub
         </a>

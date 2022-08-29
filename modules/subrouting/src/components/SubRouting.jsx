@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Route, useRouteMatch, useLocation, actions } from "@lastui/rocker/platform";
+import { useParams, useLocation, Link, Route, Routes, } from "react-router-dom"
+import { Module, actions } from "@lastui/rocker/platform";
 
 const Main = () => {
   const sharedState = useSelector((state) => state.shared);
@@ -23,7 +24,8 @@ const Sub = () => <div>Sub here and my match is</div>;
 
 const SubRouting = () => {
   const dispatch = useDispatch();
-  const match = useRouteMatch("/:part");
+  const location = useLocation();
+  const params = useParams();
 
   const dispatchLocalShared = React.useCallback(() => dispatch(actions.setLocalShared({ info: "here" })), [dispatch]);
   const dispatchGlobalShared = React.useCallback(
@@ -41,10 +43,12 @@ const SubRouting = () => {
       <div></div>
       <section className="content is-small">
         <p>Module Sub-Routing here match is</p>
-        <pre>{JSON.stringify(match, null, 4)}</pre>
+        <pre>{JSON.stringify({ location, params, }, null, 4)}</pre>
       </section>
-      <Route path="/sub" component={Sub} />
-      <Route index component={Main} />
+      <Routes>
+        <Route path="sub" element={<Sub />} />
+        <Route path="*" element={<Main />} />
+      </Routes>
     </React.Fragment>
   );
 };
