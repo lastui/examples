@@ -9,7 +9,7 @@
     "@lastui/dependencies": "1.3.0"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.13.2",
+    "@lastui/rocker": "0.13.3",
     "bulma": "0.9.4"
   }
 }
