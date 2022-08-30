@@ -7,7 +7,7 @@ import "./styles/index.css";
 import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-  Main: Simple,
+  component: Simple,
   reducer,
   middleware,
   saga,

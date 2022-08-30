@@ -7,5 +7,5 @@ if (process.env.NODE_ENV === "development") {
 }
 
 registerModule({
-  Main: Layout,
+  component: Layout,
 });

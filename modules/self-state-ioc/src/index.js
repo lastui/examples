@@ -4,6 +4,6 @@ import reducer from "./reducer";
 import { registerModule } from "@lastui/rocker/platform";
 
 registerModule({
-  Main: Probe,
+  component: Probe,
   reducer,
 });
