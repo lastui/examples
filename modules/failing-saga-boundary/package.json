@@ -6,9 +6,9 @@
     "lint": "rocker lint"
   },
   "dependencies": {
-    "@lastui/dependencies": "1.3.0"
+    "@lastui/dependencies": "1.3.2"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.13.3"
+    "@lastui/rocker": "0.13.14"
   }
 }

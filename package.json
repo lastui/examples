@@ -21,8 +21,8 @@
 		"serve": "cd server && npm start"
 	},
 	"devDependencies": {
-		"@lastui/dependencies": "1.3.0",
-		"@lastui/rocker": "0.13.3",
+		"@lastui/dependencies": "1.3.2",
+		"@lastui/rocker": "0.13.14",
 		"bulma": "0.9.4"
 	},
 	"repository": {
