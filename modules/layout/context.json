@@ -2,7 +2,7 @@
   "entrypoint": "layout-provided",
   "available": [
     {
-      "id": "layout-provided",
+      "name": "layout-provided",
       "program": {
         "url": "/main.js"
       },
