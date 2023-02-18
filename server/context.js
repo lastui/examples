@@ -16,7 +16,7 @@ function hash_programs(context) {
     available: context.available.map(function (item) {
       try {
         return {
-          id: item.id,
+          name: item.name,
           program: item.program
             ? {
                 url: item.program.url,
@@ -28,7 +28,7 @@ function hash_programs(context) {
         };
       } catch (err) {
         return {
-          id: item.id,
+          name: item.name,
           program: item.program
             ? {
                 url: item.program.url,
@@ -45,7 +45,7 @@ function hash_programs(context) {
 let context_A = {
   available: [
     {
-      id: "broken",
+      name: "broken",
       program: {
         url: "/modules/broken/build/module/broken/main.min.js",
       },
@@ -55,7 +55,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "self-state-ioc",
+      name: "self-state-ioc",
       program: {
         url: "/modules/self-state-ioc/build/module/self-state-ioc/main.min.js",
       },
@@ -63,7 +63,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "failing-saga-boundary",
+      name: "failing-saga-boundary",
       program: {
         url: "/modules/failing-saga-boundary/build/module/failing-saga-boundary/main.min.js",
       },
@@ -71,7 +71,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "simple",
+      name: "simple",
       program: {
         url: "/modules/simple/build/module/simple/main.min.js",
       },
@@ -81,7 +81,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "localisation",
+      name: "localisation",
       program: {
         url: "/modules/localisation/build/module/localisation/main.min.js",
       },
@@ -92,7 +92,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "layout",
+      name: "layout",
       program: {
         url: "/modules/layout/build/module/layout/main.min.js",
       },
@@ -104,7 +104,7 @@ let context_A = {
       },
     },
     {
-      id: "routing",
+      name: "routing",
       program: {
         url: "/modules/routing/build/module/routing/main.min.js",
       },
@@ -114,7 +114,7 @@ let context_A = {
       props: {},
     },
     {
-      id: "subrouting",
+      name: "subrouting",
       program: {
         url: "/modules/subrouting/build/module/subrouting/main.min.js",
       },
@@ -131,7 +131,7 @@ let context_A = {
 let context_B = {
   available: [
     {
-      id: "localisation",
+      name: "localisation",
       program: {
         url: "/modules/localisation/build/module/localisation/main.min.js",
       },
@@ -142,7 +142,7 @@ let context_B = {
       meta: {},
     },
     {
-      id: "self-state-ioc",
+      name: "self-state-ioc",
       program: {
         url: "/modules/self-state-ioc/build/module/self-state-ioc/main.min.js",
       },
@@ -150,7 +150,7 @@ let context_B = {
       props: {},
     },
     {
-      id: "layout",
+      name: "layout",
       program: {
         url: "/modules/layout/build/module/layout/main.min.js",
       },
@@ -171,7 +171,7 @@ let context_B = {
 let context_C = {
   available: [
     {
-      id: "layout",
+      name: "layout",
       program: {
         url: "/modules/layout/build/module/layout/main.min.js",
       },
@@ -183,7 +183,7 @@ let context_C = {
       },
     },
     {
-      id: "routing",
+      name: "routing",
       program: {
         url: "/modules/routing/build/module/routing/main.min.js",
       },
@@ -193,7 +193,7 @@ let context_C = {
       props: {},
     },
     {
-      id: "subrouting",
+      name: "subrouting",
       program: {
         url: "/modules/subrouting/build/module/subrouting/main.min.js",
       },
