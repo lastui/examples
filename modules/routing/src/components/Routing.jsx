@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link, Route, Routes, useNavigate } from "react-router-dom"
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Module } from "@lastui/rocker/platform";
 
 const A = (props) => <div>A</div>;

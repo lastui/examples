@@ -1,6 +1,6 @@
 # Examples
 
-[![Edit Rocker Examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rocker-examples-nvqbev)
+[![Edit Rocker Examples](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/rocker-examples-nvqbev)
 
 ### To run the examples
 
