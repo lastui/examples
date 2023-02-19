@@ -1,11 +1,9 @@
 import React from "react";
 
-import { actions } from "@lastui/rocker/platform";
-import { useSelector, useDispatch } from "react-redux";
+import { actions, Module } from "@lastui/rocker/platform";
+import { useDispatch } from "react-redux";
 
-import { Module } from "@lastui/rocker/platform";
-
-const Layout = (props: any) => {
+const Layout = () => {
   const dispatch = useDispatch();
 
   const refreshContext = React.useCallback(() => dispatch(actions.refresh()), [dispatch]);
