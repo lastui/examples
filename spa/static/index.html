@@ -2,6 +2,41 @@
 <head>
 </head>
 <body>
+	<script type="text/javascript">
+		function removeMountNode() {
+			if (!document.getElementById("mount")) {
+				return
+			}
+			document.getElementById("mount").remove()
+		};
+		function addMountNode() {
+			if (document.getElementById("mount")) {
+				return
+			}
+			const div = document.createElement('div');
+			div.id = 'mount';
+			document.body.appendChild(div);
+		}
+		function rapidAddRemoveMountNode() {
+			for (let i = 0; i<10000; i++) {
+				removeMountNode();
+				addMountNode();
+			}
+		}
+	</script>
+
+	<div class="field has-addons box">
+		<p class="control">
+			<button class="button is-small is-warning" onClick="removeMountNode();">remove mount node</button>
+		</p>
+		<p class="control">
+			<button class="button is-small is-success" onClick="addMountNode();">add mount node</button>
+		</p>
+		<p class="control">
+			<button class="button is-small is-danger" onClick="rapidAddRemoveMountNode();">rapidly remove+add mount node</button>
+		</p>
+	</div>
+
 	<div id="mount" />
 </body>
 </html>
