@@ -1,1 +1,3 @@
-export const getContext = async () => fetch("/context").then((data) => data.json());
+export async function getContext() {
+  return fetch("/context").then((data) => data.json());
+}
