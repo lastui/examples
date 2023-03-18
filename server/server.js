@@ -18,7 +18,7 @@ function file(filePath) {
     if (fs.existsSync(filePath)) {
       return res.sendFile(filePath);
     }
-    console.log('not found', filePath)
+    console.log("not found", filePath);
     // intentional timeout
   };
 }

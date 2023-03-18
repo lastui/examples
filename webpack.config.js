@@ -1,4 +1,4 @@
-const config = require("@lastui/rocker/webpack/config/module.js");
+const config = require("@lastui/rocker/webpack/config/module");
 
 config.entry = {
   broken: ["./modules/broken/src/index.js"],
