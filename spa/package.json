@@ -6,10 +6,10 @@
     "lint": "rocker lint"
   },
   "dependencies": {
-    "@lastui/dependencies": "1.3.13",
+    "@lastui/dependencies": "1.3.15",
     "bulma": "0.9.4"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.14.15"
+    "@lastui/rocker": "0.14.39"
   }
 }

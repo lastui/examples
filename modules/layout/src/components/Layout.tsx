@@ -22,11 +22,12 @@ const Layout = () => {
         <Module name="simple" by_consumer="consumer layout declared this via <Module> component">
           child of simple provided from layout
         </Module>
-        <Module name="broken" />
+        {React.createElement(Module, { name: "broken" })}
         <Module name="routing" />
       </section>
     </div>
   );
 };
+//<Module name="broken" />
 
 export default Layout;
