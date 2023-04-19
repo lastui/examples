@@ -6,10 +6,10 @@
     "test": "rocker test"
   },
   "dependencies": {
-    "@lastui/dependencies": "1.3.24"
+    "@lastui/dependencies": "1.3.26"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.14.82",
+    "@lastui/rocker": "0.14.87",
     "bulma": "0.9.4"
   }
 }
