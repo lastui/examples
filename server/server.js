@@ -48,11 +48,7 @@ module.exports = function (existing) {
   app.use(cookieParser());
   app.use(session({ secret: "Shh, its a secret!" }));
   app.get("/context", context);
-  app.get("/spa/dependencies.dll.min.js", file(path.join(__dirname, "../spa/build/spa/dependencies.dll.min.js")));
-  app.get("/spa/platform.dll.min.js", file(path.join(__dirname, "../spa/build/spa/platform.dll.min.js")));
-  app.get("/spa/bootstrap.dll.min.js", file(path.join(__dirname, "../spa/build/spa/bootstrap.dll.min.js")));
-  app.get("/spa/main.min.js", file(path.join(__dirname, "../spa/build/spa/main.min.js")));
-  app.get("/spa/main.css", file(path.join(__dirname, "../spa/build/spa/main.css")));
+  app.use('/spa', express.static(path.join(__dirname, '..', 'spa', 'build', 'spa')));
   app.get("/*", asset);
   app.use(express.json);
   return app;

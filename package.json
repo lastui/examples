@@ -29,8 +29,8 @@
     "upgrade": "npm run update && npm i && npm run build"
   },
   "devDependencies": {
-    "@lastui/dependencies": "1.3.26",
-    "@lastui/rocker": "0.14.87",
+    "@lastui/dependencies": "1.3.37",
+    "@lastui/rocker": "0.14.107",
     "bulma": "0.9.4"
   }
 }
