@@ -48,7 +48,7 @@ module.exports = function (existing) {
   app.use(cookieParser());
   app.use(session({ secret: "Shh, its a secret!" }));
   app.get("/context", context);
-  app.use('/spa', express.static(path.join(__dirname, '..', 'spa', 'build', 'spa')));
+  app.use("/spa", express.static(path.join(__dirname, "..", "spa", "build", "spa")));
   app.get("/*", asset);
   app.use(express.json);
   return app;
