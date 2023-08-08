@@ -1,7 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Title } from "./theme";
+
 import { Module } from "@lastui/rocker/platform";
+
+import { Title } from "./theme";
 
 const Simple = (props) => {
   const count = useSelector((state) => state.ticker);

@@ -1,7 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 import { actions, Module } from "@lastui/rocker/platform";
-import { useDispatch } from "react-redux";
 
 const Layout = () => {
   const dispatch = useDispatch();

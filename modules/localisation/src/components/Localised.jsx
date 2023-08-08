@@ -1,7 +1,8 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { actions } from "@lastui/rocker/platform";
 import { FormattedMessage, FormattedTime, useIntl } from "react-intl";
+import { useDispatch } from "react-redux";
+
+import { actions } from "@lastui/rocker/platform";
 
 const Localised = () => {
   const intl = useIntl();
