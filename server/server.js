@@ -1,9 +1,10 @@
-const path = require("path");
-const fs = require("fs");
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
+
 const contexts = require("./context");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
+
+let page_views = 0;
 
 async function index(req, res) {
   const filePath = path.join(__dirname, "../spa/build/spa/index.html");
@@ -32,8 +33,8 @@ async function asset(req, res) {
 }
 
 async function context(req, res) {
-  req.session.page_views = (req.session.page_views + 1) % 3;
-  switch (req.session.page_views) {
+  page_views = (page_views + 1) % 3;
+  switch (page_views) {
     case 0:
       return res.json(contexts.A);
     case 1:
@@ -45,10 +46,8 @@ async function context(req, res) {
 
 module.exports = function (existing) {
   const app = existing || express();
-  app.use(cookieParser());
-  app.use(session({ secret: "Shh, its a secret!" }));
   app.get("/context", context);
-  app.use('/spa', express.static(path.join(__dirname, '..', 'spa', 'build', 'spa')));
+  app.use("/spa", express.static(path.join(__dirname, "..", "spa", "build", "spa")));
   app.get("/*", asset);
   app.use(express.json);
   return app;
