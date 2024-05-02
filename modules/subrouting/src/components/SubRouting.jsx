@@ -8,14 +8,8 @@ const Main = () => {
   const sharedState = useSelector((state) => state.shared);
   return (
     <div>
-      <div>
-        <p>Global shared state is</p>
-        <code>{JSON.stringify(sharedState.global, null, 4)}</code>
-      </div>
-      <div>
-        <p>Localised shared state is</p>
-        <code>{JSON.stringify(sharedState.local, null, 4)}</code>
-      </div>
+      <p>Shared state is</p>
+      <code>{JSON.stringify(sharedState, null, 4)}</code>
     </div>
   );
 };
@@ -27,16 +21,9 @@ const SubRouting = () => {
   const location = useLocation();
   const params = useParams();
 
-  const dispatchLocalShared = React.useCallback(() => dispatch(actions.setLocalShared({ info: "here" })), [dispatch]);
-  const dispatchGlobalShared = React.useCallback(
-    () => dispatch(actions.setGlobalShared({ routing: "exits" })),
-    [dispatch],
-  );
-
   React.useEffect(() => {
-    dispatchLocalShared();
-    dispatchGlobalShared();
-  }, [dispatchLocalShared, dispatchGlobalShared]);
+    dispatch(actions.setShared({ routing: "exits" }));
+  }, [dispatch]);
 
   return (
     <React.Fragment>
