@@ -9,6 +9,7 @@ config.entry = {
   simple: ["./modules/simple/src/index.js"],
   routing: ["./modules/routing/src/index.js"],
   subrouting: ["./modules/subrouting/src/index.js"],
+  trivial: ["./modules/trivial/src/index.js"],
 };
 
 module.exports = config;
