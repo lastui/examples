@@ -6,9 +6,9 @@
     "test": "rocker test"
   },
   "dependencies": {
-    "@lastui/dependencies": "1.4.23"
+    "@lastui/dependencies": "1.5.6"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.19.37"
+    "@lastui/rocker": "0.20.19"
   }
 }

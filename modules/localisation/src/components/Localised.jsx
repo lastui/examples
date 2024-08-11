@@ -1,4 +1,4 @@
-import React from "react";
+import { useCallback } from "react";
 import { FormattedMessage, FormattedTime, useIntl } from "react-intl";
 import { useDispatch } from "react-redux";
 
@@ -8,7 +8,7 @@ const Localised = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  const changeLanguage = React.useCallback(
+  const changeLanguage = useCallback(
     (event) => {
       dispatch(actions.setLanguage(event.target.value));
     },
