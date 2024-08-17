@@ -10,6 +10,6 @@
     "bulma": "1.0.0"
   },
   "devDependencies": {
-    "@lastui/rocker": "0.20.19"
+    "@lastui/rocker": "0.20.25"
   }
 }

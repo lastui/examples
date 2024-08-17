@@ -3,50 +3,50 @@ let context_A = {
     {
       name: "broken",
       program: {
-        url: "/modules/broken/build/module/broken/main.min.js",
+        url: "/build/module/broken/main.min.js",
       },
       locales: {
-        "en-US": "/modules/broken/build/module/broken/messages/en-US.json",
+        "en-US": "/build/module/broken/messages/en-US.json",
       },
     },
     {
       name: "self-state-ioc",
       program: {
-        url: "/modules/self-state-ioc/build/module/self-state-ioc/main.min.js",
+        url: "/build/module/self-state-ioc/main.min.js",
       },
     },
     {
       name: "failing-saga-boundary",
       program: {
-        url: "/modules/failing-saga-boundary/build/module/failing-saga-boundary/main.min.js",
+        url: "/build/module/failing-saga-boundary/main.min.js",
       },
     },
     {
       name: "simple",
       program: {
-        url: "/modules/simple/build/module/simple/main.min.js",
+        url: "/build/module/simple/main.min.js",
       },
       locales: {
-        "en-US": "/modules/simple/build/module/simple/messages/en-US.json",
+        "en-US": "/build/module/simple/messages/en-US.json",
       },
     },
     {
       name: "localisation",
       program: {
-        url: "/modules/localisation/build/module/localisation/main.min.js",
+        url: "build/module/localisation/main.min.js",
       },
       locales: {
-        "en-US": "/modules/localisation/build/module/localisation/messages/en-US.json",
-        "cs-CZ": "/modules/localisation/build/module/localisation/messages/cs-CZ.json",
+        "en-US": "/build/module/localisation/messages/en-US.json",
+        "cs-CZ": "/build/module/localisation/messages/cs-CZ.json",
       },
     },
     {
       name: "layout",
       program: {
-        url: "/modules/layout/build/module/layout/main.min.js",
+        url: "/build/module/layout/main.min.js",
       },
       locales: {
-        "en-US": "/modules/layout/build/module/layout/messages/en-US.json",
+        "en-US": "/build/module/layout/messages/en-US.json",
       },
       props: {
         info: "Meta data info",
@@ -55,16 +55,16 @@ let context_A = {
     {
       name: "routing",
       program: {
-        url: "/modules/routing/build/module/routing/main.min.js",
+        url: "/build/module/routing/main.min.js",
       },
       locales: {
-        "en-US": "/modules/routing/build/module/routing/messages/en-US.json",
+        "en-US": "/build/module/routing/messages/en-US.json",
       },
     },
     {
       name: "subrouting",
       program: {
-        url: "/modules/subrouting/build/module/subrouting/main.min.js",
+        url: "/build/module/subrouting/main.min.js",
       },
     },
   ],
@@ -79,26 +79,26 @@ let context_B = {
     {
       name: "localisation",
       program: {
-        url: "/modules/localisation/build/module/localisation/main.min.js",
+        url: "/build/module/localisation/main.min.js",
       },
       locales: {
-        "en-US": "/modules/localisation/build/module/localisation/messages/en-US.json",
-        "cs-CZ": "/modules/localisation/build/module/localisation/messages/cs-CZ.json",
+        "en-US": "/build/module/localisation/messages/en-US.json",
+        "cs-CZ": "/build/module/localisation/messages/cs-CZ.json",
       },
     },
     {
       name: "self-state-ioc",
       program: {
-        url: "/modules/self-state-ioc/build/module/self-state-ioc/main.min.js",
+        url: "/build/module/self-state-ioc/main.min.js",
       },
     },
     {
       name: "layout",
       program: {
-        url: "/modules/layout/build/module/layout/main.min.js",
+        url: "/build/module/layout/main.min.js",
       },
       locales: {
-        "en-US": "/modules/layout/build/module/layout/messages/en-US.json",
+        "en-US": "/build/module/layout/messages/en-US.json",
       },
       props: {
         info: "Meta data info",
@@ -116,10 +116,10 @@ let context_C = {
     {
       name: "layout",
       program: {
-        url: "/modules/layout/build/module/layout/main.min.js",
+        url: "/build/module/layout/main.min.js",
       },
       locales: {
-        "en-US": "/modules/layout/build/module/layout/messages/en-US.json",
+        "en-US": "/build/module/layout/messages/en-US.json",
       },
       props: {
         info: "Meta data info",
@@ -128,16 +128,16 @@ let context_C = {
     {
       name: "routing",
       program: {
-        url: "/modules/routing/build/module/routing/main.min.js",
+        url: "/build/module/routing/main.min.js",
       },
       locales: {
-        "en-US": "/modules/routing/build/module/routing/messages/en-US.json",
+        "en-US": "/build/module/routing/messages/en-US.json",
       },
     },
     {
       name: "subrouting",
       program: {
-        url: "/modules/subrouting/build/module/subrouting/main.min.js",
+        url: "/build/module/subrouting/main.min.js",
       },
     },
   ],
