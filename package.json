@@ -10,23 +10,22 @@
     "url": "https://github.com/lastui/examples/issues"
   },
   "scripts": {
-    "build": "npm run build:spa && npm run build:modules",
-    "build:modules": "rocker build",
-    "build:spa": "cd spa && npm run build",
-    "postinstall": "npm run install:spa && npm run install:server",
-    "install:server": "npm --prefix=server i",
-    "install:spa": "npm --prefix=spa i",
+    "build": "rocker build",
+    "postinstall": "npm --prefix=server i",
     "lint": "rocker lint",
     "serve": "cd server && npm start",
     "start": "rocker start",
     "test": "npm run test:spa && npm run test:modules",
     "test:modules": "ls -d -- modules/* | xargs -r -I {} bash -c 'rocker --cwd={} test'",
     "test:spa": "cd spa && npm test",
-    "upgrade": "rocker upgrade && rocker upgrade --cwd=spa"
+    "upgrade": "rocker upgrade"
   },
   "devDependencies": {
-    "@lastui/dependencies": "1.5.6",
-    "@lastui/rocker": "0.20.25",
+    "@lastui/dependencies": "1.5.7",
+    "@lastui/rocker": "0.20.33",
     "bulma": "1.0.0"
+  },
+  "dependencies": {
+    "webpack-merge": "^6.0.1"
   }
 }

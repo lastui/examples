@@ -1,4 +1,4 @@
-import { registerModule } from "@lastui/rocker/platform";
+import registerModule from "@lastui/rocker/register";
 
 import Crashing from "./components/Crashing";
 import Fallback from "./components/Fallback";
