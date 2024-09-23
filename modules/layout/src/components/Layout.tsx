@@ -8,6 +8,8 @@ const Layout = () => {
 
   const refreshContext = React.useCallback(() => dispatch(actions.refresh()), [dispatch]);
 
+  console.log('X');
+
   return (
     <div className="container is-fluid">
       <section className="section is-small">
